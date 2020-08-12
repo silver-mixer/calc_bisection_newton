@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>2分法とニュートン法を用いたコンピュータでの方程式の解法</title>
+	<script src="./app.js"></script>
+	<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+<h2>2分法</h2>
+<div class="container">
+	<div>
+		<span class="font-bold">初期値</span><br>
+		<label>a:<input id="bisection_a" type="number" value=0.0 step=0.1></label><br>
+		<label>b:<input id="bisection_b" type="number" value=1.0 step=0.1></label><br>
+		<hr>
+		<span class="font-bold">状態</span><br>
+		試行回数: <span id="bisection_times">0</span><br>
+		a: <span id="bisection_a_now"></span><br>
+		b: <span id="bisection_b_now"></span><br>
+		c: <span id="bisection_c_now"></span><br>
+		a-b差: <span id="bisection_ab_diff"></span>
+		<hr>
+		<span class="font-bold">操作</span><br>
+		<button id="bisection_step">ステップ実行</button><br>
+		<button id="bisection_reset">リセット</button>
+	</div>
+	<canvas id="bisection_graph" width=640 height=480></canvas>
+</div>
+
+<h2>ニュートン法</h2>
+<div class="container">
+	<div>
+		<span class="font-bold">初期値</span><br>
+		<label>a:<input id="newton_a" type="number" value=1.0 step=0.1></label><br>
+		<hr>
+		<span class="font-bold">状態</span><br>
+		試行回数: <span id="newton_times">0</span><br>
+		a: <span id="newton_a_now"></span><br>
+		b: <span id="newton_b_now"></span><br>
+		a-b差: <span id="newton_ab_diff"></span>
+		<hr>
+		<span class="font-bold">操作</span><br>
+		<button id="newton_step">ステップ実行</button>
+		<button id="newton_reset">リセット</button>
+	</div>
+	<canvas id="newton_graph" width=640 height=480></canvas><br>
+</div>
+
+</body>
+</html>
